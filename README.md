@@ -1,2 +1,2 @@
 # Ula Ola Surfboard models
-From: [http://ulaola.site]
+From: http://ulaola.site
