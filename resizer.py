@@ -4,9 +4,9 @@ import sys
 import re
 from sys import argv
 from pprint import pprint
-from models import config
-from models import destinationMainPath
-from models import originMainPath
+from modelsConf import config
+from modelsConf import destinationMainPath
+from modelsConf import originMainPath
 
 
 
@@ -74,9 +74,9 @@ if argv[1]!="FinalArgument":
             originFiles = config[ selectedModel ]['origin']
             destinationFiles = config[ selectedModel ]['destination']
             print '\n## Converting model "'+selectedModel+'" in "'+sizeKey+ '" ##'
-            copyAndResize( originFiles[0], destinationFiles[1],selectedModel ,sizeKey ,  size[0], size[1], size[2] ) # fist gcode file
+            copyAndResize( originFiles[0], destinationFiles[0],selectedModel ,sizeKey ,  size[0], size[1], size[2] ) # fist gcode file
             copyAndResize( originFiles[1], destinationFiles[1],selectedModel ,sizeKey ,  size[0], size[1], size[2] ) # fist gcode file
     else:
         print 'model "'+selectedModel+'" not declared. Edit models.py'
 else:
-    print 'Must specify a model name ex: ./resize stuby'
+    print 'Must specify a model name ex: ./resizer.py stuby'

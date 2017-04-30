@@ -6,8 +6,8 @@
 #6'6" = 1.98
 #6'8" = 2.03
 
-originMainPath = 'surfboards'
-destinationMainPath = 'finalSurfboardSizes'
+originMainPath = 'modelFiles'
+destinationMainPath = 'modelAllSizes'
 config = {
   'stuby' : {
     'origin': [
