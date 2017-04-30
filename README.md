@@ -11,6 +11,35 @@ All files of the design process models are in "modelFiles" Folder.
 This small python software that generates all the surfboard GCode sizes fron the original model Gcode.
 The usage is very simple.
 
+Edit the file **modelsConf.py**  to add your own gcodes (bottom and top) and define on it all the sizes
 
+```Python
+config = {
+  'stuby' : {
+    'origin': [
+        'stuby/gcode_stuby64/0-bottom_FINAL.gcode',
+        'stuby/gcode_stuby64/1-top_FINAL.gcode'
+    ],
+    'destination': [
+        '0-bottom_FINAL.gcode',
+        '1-top_FINAL.gcode'
+    ],
+    'resizes': {
+      '6\'0\"': [ 0.9481, 1, 1 ],
+      '6\'2\"': [ 0.9740, 1, 1 ],
+      '6\'4\"': [ 1, 1, 1 ], ## The original size
+      '6\'6\"': [ 1.0259, 1, 1 ],
+      '6\'8\"': [ 1.0518, 1, 1 ]
+    }
+  }
+}
+```
+This configuration will generate all gcode sizes, from 6'0" to 6'8"
+
+To generate all gcodes, you have to execute **resizer.py**. Rememeber add +x permissions
+
+```Bash
+./resizer.py stuby
+```
 
 I wish you Enjoy it :)
