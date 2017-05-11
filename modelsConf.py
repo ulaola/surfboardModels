@@ -42,7 +42,7 @@ config = {
 
   'minimal' : {
     'origin': [
-        'mminimal/manimal8-gcode/1-bottom_mal8FINAL.gcode',
+        'minimal/manimal8-gcode/1-bottom_mal8FINAL.gcode',
         'minimal/manimal8-gcode/2-top_mal8FINAL.gcode'
     ],
     'destination': [
@@ -51,8 +51,8 @@ config = {
     ],
     'resizes': {
 
-      '6\'6\"': [ 1, 1.2272, 1 ],
-      '7\'0\"': [ 1, 1.1408, 1 ],
+      '6\'6\"': [ 1, 0.81481, 1 ],
+      '7\'0\"': [ 1, 0.87654, 1 ],
       '8\'0\"': [ 1, 1, 1 ] ##  The original size
     }
   }
