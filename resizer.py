@@ -67,7 +67,7 @@ argv.append('FinalArgument')
 if argv[1]!="FinalArgument":
     selectedModel = sys.argv[1]
     if selectedModel in config:
-        for sizeKey in config['stuby']['resizes']:
+        for sizeKey in config[selectedModel]['resizes']:
             ##print config['stuby']['resizes'][sizeKey]
 
             size = config[ selectedModel ]['resizes'][sizeKey]
